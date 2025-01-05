@@ -92,7 +92,7 @@ if chatgpt_api_key and stock_symbol:
     
     # Plot stock data
     st.markdown(f"<div class='subheader'>{stock_symbol} Stock Price Charts</div>", unsafe_allow_html=True)
-    fig1 = px.line(stock_data, x=stock_data.index, y=stock_data['Close'], title=f'{stock_symbol} Closing Prices')
+    fig1 = px.line(stock_data, x=stock_data.index, y='Close', title=f'{stock_symbol} Closing Prices')
     st.plotly_chart(fig1)
 
     # Moving Averages Chart
